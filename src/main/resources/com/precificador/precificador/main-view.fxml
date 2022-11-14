@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.precificador.precificador.MainController">
+    <padding><Insets bottom="20" left="20" right="20" top="20" /></padding>
+
+    <Label fx:id="titleText" contentDisplay="CENTER" text="Cálculo de Preço" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+      <font>
+          <Font name="System Bold" size="13.0" />
+      </font>
+    </Label>
+
+    <Label fx:id="dollarText" text="Cotação Dólar (U$):" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+    <Label fx:id="dollarValue" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label fx:id="productCostText" text="Custo Produto (U$):" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+    <TextField fx:id="productCostValue" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label fx:id="checkoutTaxText" text="Taxa Checkout (%):" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+    <TextField fx:id="checkoutTaxValue" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <Label fx:id="saleTaxText" text="Taxa Venda (%):" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+    <TextField fx:id="saleTaxValue" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <Label fx:id="desiredProfitText" text="Lucro Desejado (%):" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+    <TextField fx:id="desiredProfitValue" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+    <Label fx:id="finalPriceText" text="Preço Final (R$):" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font>
+    </Label>
+
+    <Label fx:id="finalPriceValue" text="0,00" GridPane.columnIndex="1" GridPane.rowIndex="7">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font>
+    </Label>
+
+    <Button onAction="#onLoadDolarExchange" text="Carregar Dólar" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+    <Button onAction="#onCalcButtonClick" text="Calcular" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+      <GridPane.margin>
+         <Insets right="90.0" />
+      </GridPane.margin></Button>
+    <Button onAction="#onCleanButtonClick" text="Limpar" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+      <GridPane.margin>
+         <Insets left="60.0" />
+      </GridPane.margin></Button>
+
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>
